@@ -50,7 +50,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests().antMatchers("login", "/logout-complete", "/users/new", "/user").permitAll()
 			.anyRequest().authenticated()
 			// ログアウト処理
-			.and().logout().logoutUrl("/logout").logoutSuccessUrl("/logout-complate").clearAuthentication(true)
+			.and().logout().logoutUrl("/logout").logoutSuccessUrl("/logout-complete").clearAuthentication(true)
 			.deleteCookies("JSESSIONID")
 			.invalidateHttpSession(true).permitAll().and().csrf()
 			.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
