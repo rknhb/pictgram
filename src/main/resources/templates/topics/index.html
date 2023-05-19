@@ -13,8 +13,8 @@
 					<div class="col-md-6 mx-auto">
 						<main>
 							<h2 class="author" th:text="${topic.user.name}"></h2>
-							<img src="" th:if="${@enviroment.getProperty('image.local')}" th:src="${topic.imageDara}" class="image" />
-							<img src="" th:unless="${@enviroment.getProperty('image.local')}" th:src="${topic.path}" class="image" />
+							<img src="" th:if="${@environment.getProperty('image.local')}" th:src="${topic.imageData}" class="image" />
+							<img src="" th:unless="${@environment.getProperty('image.local')}" th:src="${topic.path}" class="image" />
 							<pre class="description" th:text="${topic.description}"></pre>
 						</main>
 					</div>
