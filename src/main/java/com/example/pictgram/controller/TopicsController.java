@@ -68,6 +68,8 @@ import com.example.pictgram.bean.TopicCsv;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 
+import org.springframework.http.ResponseEntity;
+
 @Controller
 public class TopicsController {
 	
@@ -103,6 +105,8 @@ public class TopicsController {
 			list.add(form);
 		}
 		model.addAttribute("list", list);
+		
+		model.addAttribute("hasFooter", true);
 		
 		return "topics/index";
 	}
